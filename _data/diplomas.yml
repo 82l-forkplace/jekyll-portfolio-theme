@@ -1,0 +1,21 @@
+- name: Ingénieur IEM
+  subtitle: Informatique et Multimédia
+  university: CNAM-ENJMIN
+  obtention_year: In progress
+
+- name: Master AMINJ
+  subtitle: Audiovisuel, Médias Interactifs Numériques, Jeux
+  university: Institut National Universitaire Champollion - Albi
+  obtention_year: 2022
+
+- name: Licence Informatique
+  university: Université Toulouse 3 - Paul Sabatier
+  obtention_year: 2020
+
+- name: DUT Informatique
+  university: IUT d'Amiens - UPJV
+  obtention_year: 2018
+
+- name: Bac S SVT - Spé PC
+  university: Lycée Notre-Dame Providence
+  obtention_year: 2015

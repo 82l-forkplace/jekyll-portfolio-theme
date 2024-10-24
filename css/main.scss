@@ -1,0 +1,65 @@
+---
+---
+@import "homepage";
+@import "header";
+@import "card";
+@import "projectpage";
+
+/* Modifications */
+
+
+.gform{
+  width: 100%;
+  // height: 650px;
+}
+
+select {
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
+  outline: none;
+  background: var(--clear-text);
+  border-style: none;
+  border: 2px solid var(--dark-text);
+  color: var(--dark-text);
+  border-radius: 0 10px 0 10px;
+  border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+  font-size: 1.2rem;
+  font-family: Oswald, serif;
+  /*font-weight: bold;*/
+  margin-bottom: 2rem;
+}
+select:active, select:hover{
+  background-color: var(--dark-text);
+  color: var(--clear-text);
+}
+option, select option{
+  font-size: 1.2rem;
+  font-family: Oswald, serif;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.project-image{
+  width: 100%;
+}
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.project-gallery figcaption {
+  display: none;
+  text-align: center;
+}
+.project-gallery figure {
+  width: 20%;
+  height: auto;
+  margin: 10px;
+}
+.pswp__caption__center{
+  text-align: center !important;
+}

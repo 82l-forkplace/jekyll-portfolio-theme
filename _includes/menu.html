@@ -1,0 +1,24 @@
+<div class="navigation-menu">
+
+    <nav class="cover-navigation navigation--menu">
+        <ul class="navigation">
+            <li class="navigation__item"><a href="{{ site.baseurl }}/#header"
+                                            title="link to home page"
+                                            class="panel-button home-button">
+                <i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
+            {% assign collections = site.collections | sort: "keyVal" %}
+            {% for collection in collections %}
+                {% if collection.title %}
+                    <li class="navigation__item">
+                        <a href="{{ site.baseurl }}/#{{collection.id}}"
+                            title="link to {{collection.title}}"
+                            class="panel-button">
+                            <i class="{{collection.icon}}"></i>&nbsp;{{collection.title}}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+
+</div>
