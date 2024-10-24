@@ -1,4 +1,4 @@
-# Jekyll-Uno with Projects as cards
+# From Jekyll-Uno-Timeline to Porfolio with projects as cards
 Custom jekyll theme. Aimed at game devs and people with a lot of diverse projects.
 Design is based on scalability: easy to add projects and categories.
 
