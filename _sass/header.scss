@@ -110,9 +110,6 @@
   margin-top: -60px;
 }
 
-.menu-container{
-  position: relative;
-}
 @media screen and (max-width: 700px ){
   .homepage-default .navigation-menu{
     margin-top: -150px;
@@ -121,8 +118,3 @@
 .navigation-menu .navigation{
   margin-bottom: 0;
 }
-//.navigation--menu{
-//  position: sticky;
-//  top:0;
-//  z-index: 10;
-//}

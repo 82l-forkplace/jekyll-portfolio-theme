@@ -10,3 +10,26 @@
   font-style: italic;
   font-weight: 400;
 }
+
+.project-image{
+  width: 100%;
+}
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.project-gallery figcaption {
+  display: none;
+  text-align: center;
+}
+.project-gallery figure {
+  width: 20%;
+  height: auto;
+  margin: 10px;
+}
+
+.pswp__caption__center{
+  text-align: center !important;
+}
