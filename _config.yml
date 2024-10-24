@@ -24,13 +24,13 @@ collections:
 # be sure to name the folder containing the categories like that _<nameOfCategory>
 
 author:
-  name: 'your name'
-  email: contact@email.com
-  twitter_username: TwitterHandle
-#  facebook_username:
-  github_username:  GitHubHandle
-  gitlab_username:  GitLabHandle
-  itchio_username:  ItchHandle
+  name: '82L'
+  email: contacter82l@gmail.com
+  twitter_username: EightyTwoL
+  #  facebook_username:
+  github_username:  82l
+  gitlab_username:  82l
+  itch_username:  ItchHandle
 
 
 
