@@ -6,7 +6,7 @@ img: images/bk1.jpg
 # Directory path to pictures
 photodir : "../images/"
 # video path
-video: /videos/transept.mp4
+# video: /videos/transept.mp4
 # Excerpt of project,  used to be diffused on socials if you link project page + used on card
 excerpt : A project Sample
 keyVal: 2022.12 #put date of project, in this way, working as a float
