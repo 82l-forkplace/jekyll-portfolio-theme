@@ -17,7 +17,7 @@ Basically every time I need to add a project 😓, and I do plan to keep expandi
 2. Install bundle (gem install bundle)
 3. Download or clone repo `git clone https://github.com/82L/jekyll-portfolio-theme.git`
 4. Enter the folder: `cd jekyll-portfolio-theme/`
-5. Install plugins : `bundle install`
+5. Install plugins : `bundler install`
 6. Start Jekyll server: `bundle exec jekyll serve`
 7. Configure: `_config.yml` (May need to restart the server)
    * at least set `font_awesome` or download and add the font in `head.html`
