@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="block-links">
-            {% if page.itchio %}
-            <a target="_blank" class="foreign-link" href="{{ page.itchio }}"><i class="fab fa-itch-io"></i><span
+            {% if page.itch %}
+            <a target="_blank" class="foreign-link" href="{{ page.itch }}"><i class="fab fa-itch-io"></i><span
                     class="watchers"> Test it</span></a>
             {% endif %}
             {% if page.link %}
@@ -74,7 +74,7 @@
                     class="fab fa-github"></i><span class="watchers"> Repository</span></a>
             {% endif %}
             {% if page.gl_repo %}
-            <a target="_blank" class="foreign-link" href="https:///gitlab.com/{{ page.glrepo }}"><i
+            <a target="_blank" class="foreign-link" href="https:///gitlab.com/{{ page.gl_repo }}"><i
                     class="fa-brands fa-gitlab"></i><span class="watchers"> Repository</span></a>
             {% endif %}
         </div>

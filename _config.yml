@@ -27,10 +27,10 @@ author:
   name: 'your name'
   email: contact@email.com
   twitter_username: TwitterHandle
-#  facebook_username:
+  #  facebook_username:
   github_username:  GitHubHandle
   gitlab_username:  GitLabHandle
-  itchio_username:  ItchHandle
+  itch_username:  ItchHandle
 
 
 
