@@ -1,0 +1,84 @@
+{% if project.display %}
+
+<div class="col-12 col-lg-4 card-element" data-type="0;{{project.type}}">
+    <article class="card">
+        <a class="card-link" href="{{ project.url }}">
+            <div class="row">
+                <div class="col-8">
+                    <div class="card__header-info">
+                        <h3>{{ project.title }}</h3>
+                        <p class="card__header-subtitle">
+                            {{project.year}}
+                            {% if project.year and project.enterprise %} - {% endif %}
+                            {% if project.year and project.school %} - {% endif %}
+                            {{ project.enterprise }}{% if project.school %}School: {% endif %}{{ project.school }}
+                        </p>
+                        <div class="card__header-details">
+                            <ul>
+                                {% if project.client %}
+                                    <li>Client: {{ project.client }}</li>
+                                {% endif %}
+                                {% if project.technologies %}
+                                    <li>Tech: {{ project.technologies }}</li>
+                                {% endif %}
+                                {% if project.role %}
+                                    <li>Role: {{ project.role }}</li>
+                                {% endif %}
+                                {% if project.shipped %}
+                                    <li><strong>Project shipped</strong></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    {% if project.img %}
+                    <img class="card-img" src="{{ project.img | prepend: site.baseurl }}" alt=""/>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-desc">
+                        {{ project.excerpt | markdownify }}
+                    </div>
+
+                </div>
+            </div>
+            </a>
+            <div class="row">
+                <div class="col-12 mx-3">
+                    {% if project.itch %}
+                    <a target="_blank" class="foreign-link" href="{{ project.itchio }}"><i
+                            class="fab fa-itch-io"></i><span class="watchers"> Test it</span></a>
+                    {% endif %}
+                    {% if project.link %}
+                    <a target="_blank" class="foreign-link" href="{{ project.link }}"><i
+                            class="fas fa-link"></i><span class="watchers"> Test it</span></a>
+                    {% endif %}
+                    {% if project.steam %}
+                    <a target="_blank" class="foreign-link" href="{{ project.steam }}"><i
+                            class="fab fa-brands fa-steam"></i><span class="watchers"> Steam Page</span></a>
+                    {% endif %}
+                    {% if project.android %}
+                    <a target="_blank" class="foreign-link" href="{{ project.android }}"><i
+                            class="fab fa-brands fa-android "></i><span class="watchers"> Test it</span></a>
+                    {% endif %}
+                    {% if project.apple %}
+                    <a target="_blank" class="foreign-link" href="{{ project.apple }}"><i
+                            class="fab fa-brands fa-apple"></i><span
+                            class="watchers"> Test it</span></a>
+                    {% endif %}
+                    {% if project.gh_repo %}
+                    <a target="_blank" class="foreign-link" href="https://github.com/{{ project.gh_user }}/{{ project.gh_repo }}"><i
+                            class="fab fa-github"></i><span class="watchers"> Repository</span></a>
+                    {% endif %}
+                    {% if project.gl_repo %}
+                    <a target="_blank" class="foreign-link" href="https:///gitlab.com/{{ project.glrepo }}"><i
+                            class="fa-brands fa-gitlab"></i><span class="watchers"> Repository</span></a>
+                    {% endif %}
+                </div>
+            </div>
+    </article>
+</div>
+{% endif %}

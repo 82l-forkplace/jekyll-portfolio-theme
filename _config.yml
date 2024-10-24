@@ -1,0 +1,54 @@
+# Site settings
+title: "Site Title"
+description: "I'm a kangaroo"
+url: 'https://yoursiteurl.com'
+baseurl: ''
+bkimage: '/images/bk1.jpg'
+font_awesome: 'font-awesome js file ref, found on your font awesome account'
+collections:
+  projects:
+    id: projects # id for html
+    title: "Example of projects you've done"
+    icon: "fa-solid fa-gamepad"
+    filterProjects:
+      - TypeOfProject1:
+        typedesc: "Show type of projects 1"
+        id: 1
+      - TypeOfProject2:
+        typedesc: "Show type of projects 2"
+        id: 2
+    keyVal: 1
+    output: true
+    sort_by: keyVal
+# you can add collections entries to have different display categories, to better organise the website. 
+# be sure to name the folder containing the categories like that _<nameOfCategory>
+
+author:
+  name: 'your name'
+  email: contact@email.com
+  twitter_username: TwitterHandle
+#  facebook_username:
+  github_username:  GitHubHandle
+  gitlab_username:  GitLabHandle
+  itchio_username:  ItchHandle
+
+
+
+
+# Build settings
+destination: _site
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md']
