@@ -22,6 +22,7 @@ Basically every time I need to add a project 😓, and I do plan to keep expandi
 7. Configure: `_config.yml` (May need to restart the server)
    * at least set `font_awesome` or download and add the font in `head.html`
 8. Add your projects as .md file in folders
+9. To install website using github pages, consider this doc to setup the CI https://jekyllrb.com/docs/continuous-integration/github-actions/
 
 Access via: [http://localhost:4000/](http://localhost:4000/)
 
