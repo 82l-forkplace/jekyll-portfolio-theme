@@ -1,7 +1,7 @@
 :root{
   --clear-text: #f1f1f1;
   --card-bg: #FDFDFD;
-  --card-bg-hover: #fff0ee;
+  --card-bg-hover: #fff6f6;
   --dark-text: #232323;
   --primary-color: #DB3721;
   --primary-accentuation-color: #A62919;
@@ -32,36 +32,44 @@ html{
 .content-element{
   margin-top: 40px;
 }
+
 .content-element:first-child{
   margin-top: 100px;
 }
+
 .content-element h2{
   color: var(--primary-color);
   font-size: 3rem;
 }
+
 .footer{
   font-weight: 300;
   padding-bottom: 20px;
- 
 }
+
 .footer-container{
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .footer__copyright {
   font-style: italic;
 }
+
 .footer__bug-report{
   position: relative;
   float: right;
 }
+
 .footer-link{
   color: var(--dark-text);
   text-decoration: none;
 }
+
 .footer-link:hover{
   color: var(--primary-color);
 }
+
 @font-face {
   font-family: 'Lobster Two';
   src: url('/fonts/LobsterTwo.woff2') format('woff2'),
