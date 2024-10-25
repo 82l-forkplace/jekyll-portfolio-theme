@@ -1,5 +1,5 @@
 # Site settings
-title: "82L"
+title: "82L Portfolio"
 description: "Doing games, serious games and other things.<br/> Studying at the CNAM ENJMIN to be an engineer in computer science and multimedia"
 url: 'https://82l.github.io'
 baseurl: ''
@@ -11,11 +11,11 @@ collections:
     title: "Game projects"
     icon: "fa-solid fa-gamepad"
     filterProjects:
-      - TypeOfProject1:
-        typedesc: "Show type of projects 1"
+      - Professional:
+        typedesc: "Show professional projects"
         id: 1
-      - TypeOfProject2:
-        typedesc: "Show type of projects 2"
+      - Student:
+        typedesc: "Show student projects"
         id: 2
     keyVal: 1
     output: true
@@ -23,7 +23,7 @@ collections:
   work_projects:
     id: work
     title: "Other IT projects"
-    icon: "fas fa-file-code fa-lg"
+    icon: "fa-solid fa-code"
     keyVal: 2
     output: true
     sort_by: keyVal
