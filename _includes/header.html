@@ -24,16 +24,25 @@
                                 {% if site.author.twitter_username %}
                                 <!-- Twitter -->
                                 <li class="navigation__item">
-                                    <a href="http://twitter.com/{{ site.author.twitter_username }}"
+                                    <a href="https://twitter.com/{{ site.author.twitter_username }}"
                                        title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
                                         <i class="fab fa-twitter fa-lg" aria-label="Twitter"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if site.author.bluesky_username %}
+                                <!-- BlueSky -->
+                                <li class="navigation__item">
+                                    <a href="https://bsky.app/profile/{{ site.author.bluesky_username }}"
+                                       title="@{{ site.author.bluesky_username }} on Bluesky" target="_blank">
+                                        <i class="fa-brands fa-bluesky fa-lg" aria-label="Bluesky"></i>
                                     </a>
                                 </li>
                                 {% endif %}
                                 {% if site.author.facebook_username %}
                                 <!-- Facebook -->
                                 <li class="navigation__item">
-                                    <a href="http://fb.me/{{ site.author.facebook_username }}"
+                                    <a href="https://fb.me/{{ site.author.facebook_username }}"
                                        title="{{ site.author.facebook_username }} on Facebook" target="_blank">
                                         <i class="fab fa-facebook fa-lg" aria-label="Facebook"></i>
                                     </a>
