@@ -40,15 +40,28 @@ html{
   font-size: 3rem;
 }
 .footer{
-  font-style: italic;
   font-weight: 300;
   padding-bottom: 20px;
+ 
 }
-.footer__copyright{
+.footer-container{
   padding-left: 40px;
+  padding-right: 40px;
 }
-
-
+.footer__copyright {
+  font-style: italic;
+}
+.footer__bug-report{
+  position: relative;
+  float: right;
+}
+.footer-link{
+  color: var(--dark-text);
+  text-decoration: none;
+}
+.footer-link:hover{
+  color: var(--primary-color);
+}
 @font-face {
   font-family: 'Lobster Two';
   src: url('/fonts/LobsterTwo.woff2') format('woff2'),

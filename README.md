@@ -34,4 +34,7 @@ Access via: [http://localhost:4000/](http://localhost:4000/)
   * Re added blog posts for more in depth presentation of project
   * Added photoswipe support to display image galleries
   * Added video support on page project
-  * Added support of links to external sources
+  * Added support of links to external sources for project or yourself
+  * Remove analytics, as I don't want to mess with GDPR
+  * Repaired the preview for social medias
+  * Added sitemap and privacy policy
