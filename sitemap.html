@@ -1,0 +1,21 @@
+---
+layout: common
+robots: noindex
+title: Sitemap
+---
+<br>
+<h1>Sitemap</h1>
+<p><a href="{{ site.baseurl }}">Main page</a></p>
+<p><a href="{{ site.baseurl }}/privacyPolicy.html">Privacy Policy</a></p>
+<p><a href="{{ site.baseurl }}/sitemap.html">Sitemap</a></p>
+{% assign collections = site.collections | sort: "keyVal" %}
+{% for collection in collections %}
+    <h2>{{ collection.title }}</h2>
+    <ul>
+    {% assign posts = collection.label %}
+    {% assign projects = site[posts] | sort: "keyVal" | reverse %}
+    {% for project in projects %}
+        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endfor %}
