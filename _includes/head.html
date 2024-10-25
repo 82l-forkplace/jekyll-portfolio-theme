@@ -21,12 +21,20 @@
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
+  {% if page.img %}
+  <meta name="twitter:image" content="{{ site.baseurl }}/{{ page.img }}" />
+  {% else %}
   <meta name="twitter:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
+  {% endif %}
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.img %}
+  <meta property="og:image" content="{{ site.baseurl }}/{{ page.img }}" />
+  {% else %}
   <meta property="og:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
+  {% endif %}
 
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-60x60.png">
