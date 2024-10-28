@@ -5,7 +5,7 @@ client: Auberge des Dauphins
 enterprise: Opixido
 img: images/baladecontee.png
 android : https://play.google.com/store/apps/details?id=com.opixido.baladecontee
-excerpt: An audio guide application for visiting the "Auberge des Dauphins"
+excerpt: An audio guide application for visiting the Auberge des Dauphins
 year: 09/2022
 keyVal: 2022.09
 display: true
