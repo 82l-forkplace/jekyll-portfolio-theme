@@ -2,6 +2,9 @@
 layout: "pageProject"
 # Title of page
 title:  "Project Sample"
+# what do robots need to do with the page (noindex, nofollow)
+robots: noindex
+# thumb of the page
 img: images/bk1.jpg
 # Directory path to pictures
 photodir : "../images/"
