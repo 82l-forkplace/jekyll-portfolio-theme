@@ -1,6 +1,6 @@
 ---
 layout: common
-robots: noindex
+robots: noindex, nofollow
 title: Sitemap
 ---
 <br>
@@ -15,7 +15,9 @@ title: Sitemap
     {% assign posts = collection.label %}
     {% assign projects = site[posts] | sort: "keyVal" | reverse %}
     {% for project in projects %}
-        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% if project.display %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+        {% endif %}
     {% endfor %}
     </ul>
 {% endfor %}
