@@ -1,11 +1,141 @@
 ---
 ---
-@import "homepage";
-@import "header";
-@import "card";
-@import "projectpage";
-
 /* Modifications */
+:root{
+  --clear-text: #f1f1f1;
+  --card-bg: #FDFDFD;
+  --card-bg-hover: #fff6f6;
+  --dark-text: #232323;
+  --primary-color: #DB3721;
+  --primary-accentuation-color: #A62919;
+  --card-radius: 15px;
+  font-family: Oswald, serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+body{
+  //width: 100%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--dark-text);
+  background-color: var(--clear-text);
+  font-family: Oswald, serif;
+}
+.row{
+  margin: 0 !important;
+}
+
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.content-element{
+  margin-top: 40px;
+}
+
+.content-element:first-child{
+  margin-top: 100px;
+}
+
+.content-element h2{
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.footer{
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.footer-container{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.footer__copyright {
+  font-style: italic;
+}
+
+.footer__bug-report{
+  position: relative;
+  float: right;
+}
+
+.footer-link{
+  color: var(--dark-text);
+  text-decoration: none;
+}
+
+.footer-link:hover{
+  color: var(--primary-color);
+}
+
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('/fonts/LobsterTwo.woff2') format('woff2'),
+  url('/fonts/LobsterTwo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-ExtraLight.woff2') format('woff2'),
+  url('/fonts/Oswald-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Bold.woff2') format('woff2'),
+  url('/fonts/Oswald-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Light.woff2') format('woff2'),
+  url('/fonts/Oswald-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Regular.woff2') format('woff2'),
+  url('/fonts/Oswald-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Medium.woff2') format('woff2'),
+  url('/fonts/Oswald-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-SemiBold.woff2') format('woff2'),
+  url('/fonts/Oswald-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 .gform{
@@ -41,5 +171,278 @@ option, select option{
 select::-ms-expand {
   display: none;
 }
+
+.project-title{
+  color: var(--primary-color);
+  margin-top:20px;
+}
+.project-video{
+  width: 100%;
+  height: 300px;
+}
+.pictures-header{
+  font-style: italic;
+  font-weight: 400;
+}
+
+.project-image{
+  width: 100%;
+}
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.project-gallery figcaption {
+  display: none;
+  text-align: center;
+}
+.project-gallery figure {
+  width: 20%;
+  height: auto;
+  margin: 10px;
+}
+
+.pswp__caption__center{
+  text-align: center !important;
+}
+
+.panel-cover{
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  color: var(--clear-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 20;
+}
+.user-image{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 3px solid var(--clear-text);
+}
+.navigation{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.navigation--social .navigation__item{
+  width: 37px;
+  height: 37px;
+}
+.navigation--social .navigation__item a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.navigation__item a{
+  text-decoration: none;
+  color: var(--clear-text);
+}
+.navigation__item:hover{
+  background-color: var(--clear-text);
+  color: var(--dark-text);
+  transition: all 0.3s;
+  a{
+    color: var(--dark-text);
+  }
+}
+.navigation__item{
+  border: 2px solid var(--clear-text);
+  border-radius: 10px;
+  padding: 5px 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.navigation--menu .navigation__item{
+  padding: 5px 10px;
+}
+.navigation__item:last-child{
+  margin-right: 0;
+}
+.panel-cover--overlay{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top: 0;
+  z-index: 0;
+  background-color: rgba(68,68,68,0.6);
+  background-image: -webkit-linear-gradient(-410deg, rgba(68,68,68,0.6) 20%, rgba(0,0,0,0.9));
+  background-image: linear-gradient(140deg, rgba(68,68,68,0.6) 20%, rgba(0,0,0,0.9))
+}
+.panel-cover__divider--secondary{
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto ;
+  margin-bottom: 30px;
+}
+.panel-content{
+  position: relative;
+  z-index: 1;
+  //width: 40%;
+}
+.panel-cover__divider{
+  border-top: 2px solid;
+}
+.panel-title{
+  margin-top: 10px;
+  font-size: 6rem;
+  font-family: "Lobster Two", serif;
+}
+.panel-desc{
+  font-size: 2rem;
+  font-weight: 300;
+}
+.navigation-menu{
+  //height: 10px;
+  padding-top: 5px;
+  width: 100%;
+  background-color: var(--dark-text);
+  position: sticky;
+  top:0;
+  z-index: 10;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.homepage-default .navigation-menu{
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 700px ){
+  .homepage-default .navigation-menu{
+    margin-top: -150px;
+  }
+}
+.navigation-menu .navigation{
+  margin-bottom: 0;
+}
+
+
+.card-link{
+  text-decoration: none;
+  color: var(--dark-text);
+  width: 100%;
+  height: 100%;
+}
+.card-link:hover{
+  color: var(--dark-text);
+}
+.card{
+  border-radius: 0 var(--card-radius) 0 var(--card-radius);
+  border-radius: var(--card-radius);
+  //box-shadow: 6px 6px 0px 0px rgba(0,0,0,.6);
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+  transition: all 0.3s ease-in-out ;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+.card-element {
+  display: flex;
+}
+.card-img{
+  //width: 100%;
+  //height: 100%;
+  aspect-ratio: 1 / 1;
+  //border-radius: 0 var(--card-radius) 0 var(--card-radius);
+  border-radius: 50vh;
+  //border: 0.1px solid var(--dark-text);
+  //margin: 0;
+  padding: 0;
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  width: 75%;
+  margin-top: 12.5%;
+  margin-left: 12.5%;
+}
+.card:hover{
+  background-color: var(--card-bg-hover);
+  transform: translateX(2px) translateY(2px);
+  //box-shadow: 4px 4px 0px 0px rgba(0,0,0,.6);
+}
+.card h3{
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+.card:hover h3{
+}
+.card__header-info{
+  padding-left: 1rem;
+  padding-top: 1rem;
+
+}
+.card__header-info p{
+  padding: 0;
+  margin: 0;
+}
+.foreign-link{
+  color: var(--primary-color);
+  text-decoration: none;
+  //border-radius: 20px;
+  border-radius: 0 10px 0 10px;
+  border-radius: 10px 10px 10px 10px;
+  //box-shadow: 4px 4px 0px 0px rgba(0,0,0,.6);
+
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s;
+  padding: 3px 6px;
+  line-height: 2rem;
+  margin-top: 10px;
+  background-color: var(--card-bg);
+}
+.foreign-link:hover{
+  color: var(--clear-text);
+  background-color: var(--primary-color);
+  //box-shadow: 2px 2px 0px 0px rgba(0,0,0,.6);
+  transform: translateX(2px) translateY(2px);
+}
+.card__header-details{
+  //padding-left: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.card__header-details ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+.card__header-subtitle{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.card-desc{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.card-video{
+  width: 100%;
+  height: 250px;
+}
+.hidden_video{
+  width: 0;
+  height: 0;
+}
+
 
 
