@@ -1,52 +1,37 @@
 # Site settings
-title: "82L Portfolio"
-description: "Doing games, serious games and other things.<br/> Studying at the CNAM ENJMIN to be an engineer in computer science and multimedia"
-url: 'https://82l.github.io'
+title: "Site Title"
+description: "I'm a kangaroo"
+url: 'https://yoursiteurl.com'
 baseurl: ''
 bkimage: '/images/bk1.jpg'
-font_awesome: 'ead88c3c69.js'
+font_awesome: 'font-awesome js file ref, found on your font awesome account'
 collections:
   projects:
-    id: projects
-    title: "Game projects"
+    id: projects # id for html
+    title: "Example of projects you've done"
     icon: "fa-solid fa-gamepad"
     filterProjects:
-      - Professional:
-        typedesc: "Show professional projects"
+      - TypeOfProject1:
+        typedesc: "Show type of projects 1"
         id: 1
-      - Student:
-        typedesc: "Show student projects"
+      - TypeOfProject2:
+        typedesc: "Show type of projects 2"
         id: 2
     keyVal: 1
     output: true
     sort_by: keyVal
-  work_projects:
-    id: work
-    title: "Other IT projects"
-    icon: "fa-solid fa-code"
-    keyVal: 2
-    output: true
-    sort_by: keyVal
-  misc_projects:
-    id: experiments
-    title: "Experiments"
-    icon: "fa-solid fa-wand-magic-sparkles"
-    keyVal: 3
-    output: true
-    sort_by: keyVal
-
 # you can add collections entries to have different display categories, to better organise the website. 
 # be sure to name the folder containing the categories like that _<nameOfCategory>
 
 author:
-  name: '82L'
-  email: contacter82l@gmail.com
-  twitter_username: EightyTwoL
+  name: 'your name'
+  email: contact@email.com
+  twitter_username: TwitterHandle
   #  facebook_username:
-  github_username:  82l
-  gitlab_username:  82l
-  itch_username:  82l
-  bluesky_username: 82l.bsky.social
+  github_username:  GitHubHandle
+  gitlab_username:  GitLabHandle
+  itch_username:  ItchHandle
+  bluesky_username: blueskyhandle
 
 
 
@@ -57,7 +42,7 @@ markdown: kramdown
 highlighter: rouge
 
 sass:
-    sass_dir: _css
+    sass_dir: _sass
     style: compressed
 
 kramdown:
