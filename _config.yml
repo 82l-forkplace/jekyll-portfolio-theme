@@ -57,7 +57,7 @@ markdown: kramdown
 highlighter: rouge
 
 sass:
-    sass_dir: _sass
+    sass_dir: _css
     style: compressed
 
 kramdown:
