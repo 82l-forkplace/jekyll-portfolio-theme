@@ -234,8 +234,7 @@ select::-ms-expand {
   flex-wrap: wrap;
 }
 .navigation--social .navigation__item{
-  width: 37px;
-  height: 37px;
+  aspect-ratio: 1/1;
 }
 .navigation--social .navigation__item a{
   display: flex;
