@@ -21,87 +21,15 @@
                     <div class="col-12">
                         <nav class="cover-navigation navigation--social">
                             <ul class="navigation">
-                                {% if site.author.github_username %}
+                                {% for social in site.socials %}
                                 <!-- GitHub -->
                                 <li class="navigation__item">
-                                    <a href="https://www.github.com/{{ site.author.github_username }}"
-                                       title="{{ site.author.name }} on GitHub" target="_blank">
-                                        <i class="fab fa-github fa-lg" aria-label="GitHub"></i>
+                                    <a href="{{ social.link }}"
+                                       title="{{ social.link-title }}" target="_blank">
+                                        <i class="{{ social.icon }}" role='presentation'></i>
                                     </a>
                                 </li>
-                                {% endif %}
-                                {% if site.author.gitlab_username %}
-                                <!-- GitHub -->
-                                <li class="navigation__item">
-                                    <a href="https://www.gitlab.com/{{ site.author.gitlab_username }}"
-                                       title="{{ site.author.name }} on GitLab" target="_blank">
-                                        <i class="fa-brands fa-gitlab" aria-label="GitLab"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.itch_username %}
-                                <!-- Itch.io -->
-                                <li class="navigation__item">
-                                    <a href="https://{{ site.author.itch_username}}.itch.io"
-                                       title="{{ site.author.name  }} on Itch.io" target="_blank">
-                                        <i class="fab fa-itch-io fa-lg" aria-label="Itch.io"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.twitter_username %}
-                                <!-- Twitter -->
-                                <li class="navigation__item">
-                                    <a href="https://twitter.com/{{ site.author.twitter_username }}"
-                                       title="@{{ site.author.name }} on Twitter" target="_blank">
-                                        <i class="fab fa-twitter fa-lg" aria-label="Twitter"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.bluesky_username %}
-                                <!-- BlueSky -->
-                                <li class="navigation__item">
-                                    <a href="https://bsky.app/profile/{{ site.author.bluesky_username }}"
-                                       title="@{{ site.author.name }} on Bluesky" target="_blank">
-                                        <i class="fa-brands fa-bluesky fa-lg" aria-label="Bluesky"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.facebook_username %}
-                                <!-- Facebook -->
-                                <li class="navigation__item">
-                                    <a href="https://fb.me/{{ site.author.facebook_username }}"
-                                       title="{{ site.author.name }} on Facebook" target="_blank">
-                                        <i class="fab fa-facebook fa-lg" aria-label="Facebook"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.linkedin_username %}
-                                <!-- LinkedIn -->
-                                <li class="navigation__item">
-                                    <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}"
-                                       title="{{ site.author.name }} on LinkedIn" target="_blank">
-                                        <i class="fab fa-linkedin fa-lg" aria-label="LinkedIn"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.meetup_name %}
-                                <!-- Meetup -->
-                                <li class="navigation__item">
-                                    <a href="https://www.meetup.com/{{ site.author.meetup_name }}"
-                                       title="Meetup {{ site.author.name }}" target="_blank">
-                                        <i class="fab fa-meetup fa-lg" aria-label="Meetup"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% if site.author.email %}
-                                <li class="navigation__item">
-                                    <a href="mailto:{{ site.author.email }}"
-                                       title="Send email to {{ site.author.name }}"
-                                       target="_blank">
-                                        <i class="fa-solid fa-envelope" aria-label="Email"></i>
-                                    </a>
-                                </li>
-                                {% endif %}
+                                {% endfor %}
                             </ul>
                         </nav>
                     </div>

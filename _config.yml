@@ -25,13 +25,14 @@ collections:
 
 author:
   name: 'your name'
-  email: contact@email.com
-  twitter_username: TwitterHandle
-  #  facebook_username:
-  github_username:  GitHubHandle
-  gitlab_username:  GitLabHandle
-  itch_username:  ItchHandle
-  bluesky_username: blueskyhandle
+
+socials:
+  - link : https://bsky.app/
+    icon : "fa-brands fa-bluesky fa-lg"
+    link-title : "Someone on bluesky"
+  - link: "mailto:contact@email.com"
+    icon: "fa-solid fa-envelope"
+    link-title: "Contact by mail"
 
 
 
