@@ -10,14 +10,14 @@
   --primary-accentuation-color: #A62919;
   --card-radius: 15px;
   font-family: Oswald, serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
 }
 
 body{
   //width: 100%;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--dark-text);
   background-color: var(--clear-text);
   font-family: Oswald, serif;
@@ -46,7 +46,7 @@ html{
 }
 
 .footer{
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 20px;
 }
 
@@ -302,7 +302,7 @@ select::-ms-expand {
 }
 .panel-desc{
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .navigation-menu{
   //height: 10px;
@@ -419,7 +419,7 @@ select::-ms-expand {
   //padding-left: 10px;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 5px;
 }
 .card__header-details ul{
