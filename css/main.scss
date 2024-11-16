@@ -439,10 +439,43 @@ select::-ms-expand {
   width: 100%;
   height: 250px;
 }
+.tech-list{
+  flex-direction: row;
+  //flex-wrap: nowrap;
+  display: flex;
+  margin-bottom: 10px;
+}
 .hidden_video{
   width: 0;
   height: 0;
 }
+.bg-cartridge .tech-cartridge{
+  background-color: var(--card-bg);
+}
+.tech-cartridge{
+  height: 1.7rem;
+  display: flex;
+  flex-direction: row;
+  text-align:center;
+  align-items: center;
+  width: fit-content;
+  margin: 2px;
+  padding: 5px;
+  background-color: var(--clear-text);
+  border-radius: 5px;
+  text-wrap: nowrap;
+}
 
+.tech-logo{
+  display: block;
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  margin-right: 2px;
+}
 
-
+.block-links{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}

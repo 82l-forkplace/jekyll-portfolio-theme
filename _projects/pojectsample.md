@@ -23,38 +23,32 @@ year: 12/2022 #put date of project as a real date
 
 # Format of what you've done, video game, music
 format: Example
-# Technologies you worked with
-technologies: Web
+# Label of techs used
+tech-label: "Techs :"
+# Technologies you worked with (uses labels from config)
+techs:
+  - csharp
+  - cpp
 # Your role in this project
 role: "Mastermind"
 # If the project is shipped
 shipped: true
 # Type of project, based on collection projectTypes in config file
 type: 1
-# GIT
-# If there is a Github repo uncomment below and change values
-# gh_user: GithubUserName
-# gh_repo : RepoName
-# If there is a Gitlab repo uncomment below and change values
-# gl_repo: GitlabRepoName/repoName
-# Thumb image of project
-# Outside links, if your project is on some platforms:
-# Common outside link
-# link: https://yoururl.com
-# Itch link
-# itch: https://name.itch.io/projectpage
-# Steam link
-# steam: https://steam.com
-# Android link
-# android: https://play.google.com
-# Apple link
-# apple: https://apple.com
+
+# Outside links to the project, displayed in order, icon is from font awesome
+links:
+  - label: "Test it"
+    icon: "fas fa-link"
+    url: ""
 
 # If the card should be shown on the website (or hidden)
 display: true
 ---
-<p>this is an exemple page of project</p>
-<p>With some picture example of photoswipe</p>
+this is an exemple page of project
+
+With some picture example of photoswipe
+
 <div class="project-gallery">
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="{{page.photodir}}bk1.jpg" itemprop="contentUrl" data-size="4013x2158">
