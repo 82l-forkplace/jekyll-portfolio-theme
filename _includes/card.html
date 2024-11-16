@@ -18,9 +18,6 @@
                                 {% if project.client %}
                                     <li>Client: {{ project.client }}</li>
                                 {% endif %}
-                                {% if project.technologies %}
-                                    <li>Tech: {{ project.technologies }}</li>
-                                {% endif %}
                                 {% if project.role %}
                                     <li>Role: {{ project.role }}</li>
                                 {% endif %}
@@ -35,6 +32,13 @@
                     {% if project.img %}
                     <img class="card-img" src="{{ project.img | prepend: site.baseurl }}" alt=""/>
                     {% endif %}
+                    <span>{{ project.tech-label }}</span>
+                    <div class="tech-list">
+                        {% for tech in project.techs %}
+                        {% include tech.html %}
+                        {% endfor %}
+                    </div>
+                  
                 </div>
             </div>
             <div class="row">
@@ -48,35 +52,9 @@
             </a>
             <div class="row">
                 <div class="col-12 mx-3">
-                    {% if project.itch %}
-                    <a target="_blank" class="foreign-link" href="{{ project.itch }}"><i
-                            class="fab fa-itch-io"></i><span class="watchers"> Test it</span></a>
-                    {% endif %}
-                    {% if project.link %}
-                    <a target="_blank" class="foreign-link" href="{{ project.link }}"><i
-                            class="fas fa-link"></i><span class="watchers"> Test it</span></a>
-                    {% endif %}
-                    {% if project.steam %}
-                    <a target="_blank" class="foreign-link" href="{{ project.steam }}"><i
-                            class="fab fa-brands fa-steam"></i><span class="watchers"> Steam Page</span></a>
-                    {% endif %}
-                    {% if project.android %}
-                    <a target="_blank" class="foreign-link" href="{{ project.android }}"><i
-                            class="fab fa-brands fa-android "></i><span class="watchers"> Test it</span></a>
-                    {% endif %}
-                    {% if project.apple %}
-                    <a target="_blank" class="foreign-link" href="{{ project.apple }}"><i
-                            class="fab fa-brands fa-apple"></i><span
-                            class="watchers"> Test it</span></a>
-                    {% endif %}
-                    {% if project.gh_repo %}
-                    <a target="_blank" class="foreign-link" href="https://github.com/{{ project.gh_user }}/{{ project.gh_repo }}"><i
-                            class="fab fa-github"></i><span class="watchers"> Repository</span></a>
-                    {% endif %}
-                    {% if project.gl_repo %}
-                    <a target="_blank" class="foreign-link" href="https:///gitlab.com/{{ project.gl_repo }}"><i
-                            class="fa-brands fa-gitlab"></i><span class="watchers"> Repository</span></a>
-                    {% endif %}
+                    {% for link in project.links %}
+                        {% include outside-link.html %}
+                    {% endfor %}
                 </div>
             </div>
     </article>

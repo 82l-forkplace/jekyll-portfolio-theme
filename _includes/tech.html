@@ -1,0 +1,9 @@
+{% assign data = site.techs[tech] %}
+{% if data %}
+<span class="tech-cartridge">
+    {% if data.logo %}
+    <img class="tech-logo" src="{{ site.baseurl }}{{ data.logo }}" alt="" aria-hidden="true">
+    {% endif %}
+    {{data.label}}
+</span>
+{% endif %}
