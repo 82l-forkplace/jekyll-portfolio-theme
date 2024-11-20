@@ -9,17 +9,17 @@ robots: noindex, nofollow
   {% assign posts = collection.label %}
   {% if site[posts].size > 0 %}
     <div id="{{ collection.id }}" class="content-element">
-      {% assign shippedProjects =  site[posts] | where: 'shipped', true %}
       <h2>{{ site[posts] | size }} {{ collection.title }}
-        {% if shippedProjects.size > 0 %} - {{shippedProjects.size}} shipped projects{% endif %}
       </h2>
       {% if collection.filterProjects %}
-      <label for="type-select"></label><select class="filter-list filter-type" name="types" id="type-select">
-          <option class="btn-type" value="0">Show all types of projects</option>
-          {% for projectType in collection.filterProjects %}
-            <option class="btn-type" value="{{projectType.id}}">{{ projectType.typedesc }}</option>
-          {% endfor %}
-        </select>
+      <div class="filter-container">
+      <input class="filter-type" type="radio" id="{{collection.label}}{{ collection.keyVal }}0" name="{{ collection.keyVal }}" value="0" checked />
+      <label for="{{collection.label}}{{ collection.keyVal }}0">Show all types of projects</label>
+      {% for projectType in collection.filterProjects %}
+        <input class="filter-type" type="radio" id="{{collection.label}}{{ collection.keyVal }}{{projectType.id}}" name="{{ collection.keyVal }}" value="{{projectType.id}}" />
+        <label  for="{{collection.label}}{{ collection.keyVal }}{{projectType.id}}">{{ projectType.typedesc }}</label>
+      {% endfor %}
+      </div>
       {% endif %}
       <div class="row {{ collection.id }}-projects">
         {% assign projects = site[posts] | sort: "keyVal" | reverse %}

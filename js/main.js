@@ -28,7 +28,6 @@ $(".filter-type").on("change", function () {
   }
 }
 
-$(".filter-type").trigger("change");
 
  //filtring all, in fonction of the data obj
  function filterList (idToSearch, dataObj, idObj) {

@@ -8,6 +8,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                {% if page.format %}
+                    <p class="project-format">{{ page.format }}</p>
+                {% endif %}
                 <h1 class="project-title">{{ page.title }}</h1>
             </div>
         </div>
@@ -17,18 +20,15 @@
                     <p class="year-block">
                         {{ page.year }}
                         {% if page.year and page.enterprise %} - {% endif %}
-                        {% if page.year and page.school %} - {% endif %}
-                        {{ page.enterprise }}{{ page.school }}
+                        {% if page.year and page.student %} - {% endif %}
+                        {{ page.enterprise }}{% if page.student %}Student Project{% endif %}
                     </p>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6 no-gutter">
-                            <div class="card__header-details">
+                            <div class="project-desc">
                                 <ul>
                                     {% if page.client %}
                                     <li>Client: {{ page.client }}</li>
-                                    {% endif %}
-                                    {% if page.format %}
-                                    <li>Type: {{ page.format }}</li>
                                     {% endif %}
                                     {% if page.role %}
                                     <li>Role: {{ page.role }}</li>
@@ -37,8 +37,8 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <span>{{ page.tech-label }}</span>
                             <div class="tech-list bg-cartridge">
+                                <span>{{ page.tech-label }}</span>
                                 {% for tech in page.techs %}
                                 {% include tech.html %}
                                 {% endfor %}
@@ -60,13 +60,10 @@
                 {% include outside-link.html %}
                 {% endfor %}
             </div>
-            <div class="col-4">
-
-            </div>
         </div>
         <hr class="panel-cover__divider text-center">
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-8 project-text">
                 {{content}}
             </div>
             {% if page.video %}
@@ -76,6 +73,13 @@
                 </video>
             </div>
             {% endif %}
+        </div>
+        <div class="row">
+            <div class="col-8 block-links">
+                {% for link in page.links %}
+                {% include outside-link.html %}
+                {% endfor %}
+            </div>
         </div>
     </div>
     {% include footer.html %}
