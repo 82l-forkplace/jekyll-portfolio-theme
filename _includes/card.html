@@ -4,14 +4,17 @@
     <article class="card">
         <a class="card-link" href="{{ project.url }}">
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 card-padding-left">
                     <div class="card__header-info">
+                        {% if project.format %}
+                            <p class="format">{{ project.format }}</p>
+                        {% endif %}
                         <h3>{{ project.title }}</h3>
                         <p class="card__header-subtitle">
                             {{project.year}}
                             {% if project.year and project.enterprise %} - {% endif %}
-                            {% if project.year and project.school %} - {% endif %}
-                            {{ project.enterprise }}{% if project.school %}School: {% endif %}{{ project.school }}
+                            {% if project.year and project.student %} - {% endif %}
+                            {{ project.enterprise }}{% if project.student %}Student Project{% endif %}
                         </p>
                         <div class="card__header-details">
                             <ul>
@@ -28,33 +31,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 card-img-container card-padding-right">
                     {% if project.img %}
                     <img class="card-img" src="{{ project.img | prepend: site.baseurl }}" alt=""/>
                     {% endif %}
-                    <span>{{ project.tech-label }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 card-padding-left card-padding-right">
                     <div class="tech-list">
                         {% for tech in project.techs %}
                         {% include tech.html %}
                         {% endfor %}
                     </div>
-                  
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
                     <div class="card-desc">
                         {{ project.excerpt | markdownify }}
                     </div>
-
                 </div>
             </div>
             </a>
             <div class="row">
-                <div class="col-12 mx-3">
+                <div class="col-12 card-links card-padding-right card-padding-left">
+                    <a class="plus-link" href="{{ project.url }}"><span>See more</span></a>
+                        
                     {% for link in project.links %}
                         {% include outside-link.html %}
                     {% endfor %}
+
                 </div>
             </div>
     </article>
